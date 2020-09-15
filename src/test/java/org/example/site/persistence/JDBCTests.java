@@ -13,7 +13,7 @@ public class JDBCTests {
     // 제일 첫번째로 해야할 작업, DB와 원활히 연동이 되는지 테스트, 디비드라이버만 pom에 추가후 테스트한다.
     static {
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -23,7 +23,7 @@ public class JDBCTests {
     public void testConnecton() {
         try (Connection con =
                      DriverManager.getConnection(
-                             "jdbc:mariadb://127.0.0.1:3306/test_ex",
+                             "jdbc:mysql://127.0.0.1:3306/test_ex?useSSL=false&serverTimezone=Asia/Seoul",
                              "test",
                              "rhksrb10"
                      )) {
