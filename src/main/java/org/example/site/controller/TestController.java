@@ -12,4 +12,9 @@ public class TestController {
 
         return "test";
     }
+
+    @RequestMapping("/toast.do")
+    public String home1() {
+        return "toastGrid/home";
+    }
 }
