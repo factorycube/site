@@ -26,6 +26,6 @@
 
     <mybatis-spring:scan base-package="org.example.site.mapper"/>
 
-    <context:component-scan base-package="org.example.site"/>
+    <context:component-scan base-package="org.example.site.service"/>
 
 </beans>
